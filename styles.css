@@ -1,0 +1,155 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --blue-neutral: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  transition: 0.2s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.pattern {
+  /* width: 100%; */
+  height: 100vh;
+  background-color: var(--pale-blue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pattern::after {
+  content: "";
+  background-image: url(./assets/pattern-background-desktop.svg);
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card {
+  background-color: white;
+  width: 350px;
+  margin: auto;
+  margin: auto;
+  z-index: 9999;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-ilustration {
+  background-image: url(./assets/illustration-hero.svg);
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-content {
+  text-align: center;
+  margin-top: -20px;
+  padding: 20px 40px;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.description {
+  color: var(--desaturated-blue);
+  font-size: 0.8rem;
+}
+
+.card-order {
+  /* border: 1px solid orange; */
+  padding: 15px;
+  background-color: var(--blue-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.card-plan {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  /* border: 1px solid orange; */
+}
+
+.change_plan {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.card-details {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details b {
+  color: var(--dark-blue);
+  font-size: 0.8rem;
+}
+
+.card-details span {
+  color: var(--desaturated-blue);
+  font-size: 0.8rem;
+}
+
+.btn-payment {
+  background-color: var(--bright-blue);
+  color: white;
+  text-decoration: none;
+  display: block;
+  line-height: 40px;
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 8px 55px 0 var(--desaturated-blue);
+}
+
+.btn-cancel {
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 0.8rem;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+}
+
+.btn-cancel:hover {
+  color: var(--dark-blue);
+  opacity: 1;
+}
+
+.footer {
+  z-index: 99;
+  margin: auto;
+}
